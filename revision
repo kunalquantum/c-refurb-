@@ -1,0 +1,112 @@
+ //Check Voting Eligibility
+//Write a program to check if a person is eligible to vote
+
+#include<iostream>
+using namespace std;
+class assignment{
+private:
+    string name;
+    int age;
+    int marks;
+    int number;
+    int side1,side2,side3;
+    int sum1,sum2,sum3;
+    int year;
+public :
+ void validator(){
+        cout<<"enter the name :"<<endl;
+        cin>>name;
+        cout<<"enter the age :\n";
+        cin>>age;
+       
+        if(age>=18)
+        cout<<"The "<<name<< " is eligible for vote \n";  
+        else
+        cout<<"The "<<name<< " is NOT eligible for vote \n";   
+    }
+ void gradeCalc(){
+        cout<<"enter the name :"<<endl;
+        cin>>name;
+        cout<<"enter the marks :\n";
+        cin>>marks;
+       
+        if((marks>=90)&&(marks<=100))
+        cout<<"The Student "<<name<< " has scored A Grade \n";  
+        else if((marks>=80)&&(marks<=89))
+        cout<<"The Student "<<name<< " has scored B Grade \n";
+        else if((marks>=70)&&(marks<=79))
+        cout<<"The Student "<<name<< " has scored C Grade \n";
+        else if((marks>=60)&&(marks<=69))
+        cout<<"The Student "<<name<< " has scored D Grade \n";
+        else if((marks>=50)&&(marks<=59))
+        cout<<"The Student "<<name<< " has scored E Grade \n";
+        else if((marks>=40)&&(marks<=49))
+        cout<<"The Student "<<name<< " has scored F Grade \n";
+        
+        
+          
+ }
+ 
+ void signchecker(){
+     cout<<"enter the number :\n";
+     cin>>number;
+     
+     if(number>0)
+     cout<<"positive \n";
+     else if(number<0)
+     cout<<"negative number\n";
+     else
+     cout<<"zero";
+ }
+ 
+ void validTrianle(){
+        cout<<"Enter the side 1"<<endl;
+        cin>>side1;
+        cout<<"Enter the side 2"<<endl;
+        cin>>side2;
+        cout<<"Enter the side 3"<<endl;
+        cin>>side3;
+        
+        
+        sum1=((side1+side2)>side3)?(side1+side2):-1;
+        sum2=((side3+side2)>side1)?(side1+side2):-1;
+        sum3=((side1+side3)>side2)?(side1+side2):-1;
+        
+        if((sum1>0)||(sum2>0)||(sum3>0))
+        cout<<"valid Triangle\n";
+        else
+        cout<<"Invalid Triangle\n";
+        
+        
+        
+        
+
+     
+     
+ }
+ void leapyear(){
+      cout<<"Enter the Year :"<<endl;
+      cin>>year;
+     
+     if((year%4==0)&&(year%100!=0)&&(year%400!=0))
+     cout<<"It is a Leap Year \n";
+     else
+     cout<<"it is NOt a Leap year\n";
+     
+ }
+ 
+ 
+     
+ }
+;
+
+int main(){
+   assignment a1,a2,a3,a4,a5;
+   //a1.validator();
+   //a2.gradeCalc();
+   //a3.signchecker();
+   //a4.validTrianle();
+   a5.leapyear();
+   
+}
+    
