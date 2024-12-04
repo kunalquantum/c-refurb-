@@ -1,0 +1,53 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+class bank{
+private:
+    string name;
+    int account_no;
+    int attempts;
+    bool status=false;
+    int count=0;
+    int len;
+public:
+    void accountNumberValidator(){
+        cout<<"enter the Name : \n"<<endl;
+        cin>>name;
+        
+       
+         
+        attempts=3;
+        while(attempts>0){
+             attempts--;
+             cout<<"Enter the account Numnber ;\n"<<endl;
+             cin>>account_no;
+             len=account_no; 
+             while(len)
+             {
+                 count++;
+                 len/=10;
+             }
+             if(count==10){
+                 status=true;
+                 cout<<"Congratulations "<<name<<endl;
+                 cout<<"The account password is valid \n";
+                 break;
+             }
+             else{
+                  cout<<"Wrong input Try Again!!! \n";
+             }
+             
+            
+        }
+        if(status!=true)
+        cout<<"Sorry incorrect account number try again next time  \n";
+    }
+    
+};
+
+int main() {
+    bank b1;
+    b1.accountNumberValidator();
+
+    return 0;
+}
